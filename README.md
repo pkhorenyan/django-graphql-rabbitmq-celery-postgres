@@ -25,7 +25,7 @@ http://localhost:8000/graphql/
 
 ### Регистрация пользователя
 
-```json lines
+```
 mutation {
   register(username: "testuser", password: "password123", email: "test@example.com") {
     success
@@ -35,7 +35,7 @@ mutation {
 
 ### Получение JWT токена
 
-```json lines
+```
 mutation {
   tokenAuth(username: "testuser", password: "password123") {
     token
@@ -48,7 +48,7 @@ mutation {
 ### Логин
 В запросе надо также указать JWT токен
 
-```json lines
+```
 query {
   me {
     id
@@ -63,7 +63,7 @@ query {
 
 <b>Body (form-data):</b>
 * `operations`
-```json lines
+```
 {
   "query": "mutation UploadFile($file: Upload!, $name: String!) { uploadFile(file: $file, name: $name) { file { id name lineCount uploadedAt} } }",
   "variables": {
@@ -73,7 +73,7 @@ query {
 }
 ```
 * `map`
-```json lines
+```
 { "0": ["variables.file"] }
 ```
 * `0`<br>
@@ -85,7 +85,7 @@ query {
 ### Просмотр загруженных файлов
 В запросе надо также указать JWT токен и userid
 
-```json lines
+```
 query {
   userFiles(userId: "1") {
     id
@@ -103,7 +103,7 @@ query {
 ### Логаут
 В запросе надо указать refreshToken
 
-```json lines
+```
 mutation {
   revokeToken(refreshToken: "632d1578a83662ceb0a5d2b4a7e7d773214ced9c") {
     revoked
