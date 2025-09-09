@@ -17,6 +17,9 @@
 ```bash
 docker compose up --build
 ```
+Заглушка:
+http://localhost:8000/<br>
+RabbitMQ: http://localhost:15672/<br>
 
 ## Тестирование
 
