@@ -38,7 +38,7 @@ mutation {
 
 ### Получение JWT токена
 
-```
+```json lines
 mutation {
   tokenAuth(username: "testuser", password: "password123") {
     token
